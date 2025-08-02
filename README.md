@@ -1,14 +1,14 @@
-# Air Quality Data Analyzer 🌬️
+# CSV File Analyzer 📊
 
-This project provides a Python script for performing a comprehensive Exploratory Data Analysis (EDA) on the Air Quality UCI dataset. The script automates the process of data loading, cleaning, analysis, and visualization.
+This project provides a Python script for performing a comprehensive Exploratory Data Analysis (EDA) on any given CSV file. The script automates the process of data loading, cleaning, analysis, and visualization, making it a versatile tool for initial data assessment.
 
 ---
 
 ## 📖 Description
 
-The primary goal of this project is to offer a reusable and efficient tool for an initial analysis of a CSV file. The script reads the `AirQualityUCI.csv` data, preprocesses it by handling missing values and incorrect data types, and then generates key statistical summaries and visualizations.
+The primary goal of this project is to offer a reusable and efficient tool for an initial analysis of tabular data. The script is designed to be adaptable, but the current implementation demonstrates its capabilities using the **Air Quality UCI dataset** as an example. It preprocesses the data by handling missing values and incorrect data types, and then generates key statistical summaries and visualizations.
 
-This serves as a foundational step in any data science workflow, providing crucial insights into the dataset's structure and quality.
+This serves as a foundational step in any data science workflow, providing crucial insights into a dataset's structure and quality.
 
 **Technologies Used:**
 * Python
@@ -21,7 +21,7 @@ This serves as a foundational step in any data science workflow, providing cruci
 
 ## ✨ Features
 
-* **Custom Data Loading:** Reads CSV files with specified delimiters (`;`) and handles custom missing value notations (`-200`).
+* **Custom Data Loading:** Reads CSV files with specified delimiters and handles custom missing value notations (e.g., `-200`).
 * **Data Cleaning:** Automatically drops irrelevant columns and fills missing numerical data with the column's mean.
 * **Data Profiling:** Displays total rows, columns, and data types for a quick overview.
 * **Statistical Summary:** Calculates and prints descriptive statistics (mean, median, std, etc.) for all numerical features.
@@ -50,11 +50,11 @@ To run this script on your local machine, follow these steps:
 
 ## 🏃‍♀️ How to Run
 
-1.  **Download the Dataset:**
-    Make sure you have the `AirQualityUCI.csv` file. You can download it from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/360/air+quality).
+1.  **Download the Example Dataset:**
+    Make sure you have the `AirQualityUCI.csv` file. You can download it from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/360/air+quality). To use your own data, simply change the file path.
 
 2.  **Update File Path:**
-    Open the Python script and update the `file_path` variable to the location of your `AirQualityUCI.csv` file.
+    Open the Python script and update the `file_path` variable to the location of your CSV file.
     ```python
     # Example usage
     if __name__ == "__main__":
@@ -77,19 +77,6 @@ After running the script, you will see:
 2.  **Two Plot Windows:**
     * A heatmap showing the initial state of missing values.
     * A bar chart comparing the mean of each numerical feature.
-
----
-
-## 📊 Data Description
-
-This project uses the **Air Quality Data Set** from the UCI Machine Learning Repository. The dataset contains 9358 instances of hourly averaged responses from an array of 5 metal oxide chemical sensors embedded in an Air Quality Chemical Multisensor Device.
-
-The script specifically analyzes columns related to gas concentrations, such as:
-* `CO(GT)`: True hourly averaged concentration of CO in mg/m^3
-* `PT08.S1(CO)`: PT08.S1 (tin oxide) hourly averaged sensor response
-* `C6H6(GT)`: True hourly averaged Benzene concentration in µg/m^3
-* `PT08.S2(NMHC)`: PT08.S2 (titania) hourly averaged sensor response
-* ...and other sensor readings.
 
 ---
 
